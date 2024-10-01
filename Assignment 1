@@ -1,0 +1,415 @@
+class Customer:
+    """
+    Represents a customer in the hotel management system.
+    Stores personal information and manages reservations.
+    """
+
+    def __init__(self, customer_id, name, phone_number, email, reservations_list=None):
+        """
+        Initialize a Customer object with personal details and an optional reservation list.
+
+        :param customer_id: Unique identifier for the customer
+        :param name: Customer's full name
+        :param phone_number: Customer's contact number
+        :param email: Customer's email address
+        :param reservations_list: List of customer's reservations (default is an empty list)
+        """
+        self.customer_id = customer_id
+        self.name = name
+        self.phone_number = phone_number
+        self.email = email
+        self.reservations_list = reservations_list if reservations_list is not None else []
+
+    # Getter methods
+    def get_customer_id(self):
+        """Return the customer's unique identifier."""
+        return self.customer_id
+
+    def get_name(self):
+        """Return the customer's full name."""
+        return self.name
+
+    def get_phone_number(self):
+        """Return the customer's contact number."""
+        return self.phone_number
+
+    def get_email(self):
+        """Return the customer's email address."""
+        return self.email
+
+    def get_reservations_list(self):
+        """Return the list of customer's reservations."""
+        return self.reservations_list
+
+    # Setter methods
+    def set_customer_id(self, customer_id):
+        """Update the customer's unique identifier."""
+        self.customer_id = customer_id
+
+    def set_name(self, name):
+        """Update the customer's full name."""
+        self.name = name
+
+    def set_phone_number(self, phone_number):
+        """Update the customer's contact number."""
+        self.phone_number = phone_number
+
+    def set_email(self, email):
+        """Update the customer's email address."""
+        self.email = email
+
+    def view_reservation_details(self):
+        """
+        Retrieve and display reservation details for the customer.
+        This method would typically retrieve Customers reservations
+        """
+        # Implementation would go here
+        pass
+
+
+class Payment:
+    """
+    Represents a payment in the hotel management system.
+    Manages payment details, processing, and status.
+    """
+
+    def __init__(self, payment_id, reservation_id, amount, payment_method, payment_status):
+        """
+        Initialize a Payment object with transaction details.
+        Constructor takes in the following parameters:
+        - payment_id: Unique identifier for the payment
+        - reservation_id: ID of the associated reservation
+        - amount: Total amount of the payment
+        - payment_method: Method used for payment (e.g. "Credit Card", "Cash")
+        - payment_status: Current status of the payment (e.g. "Pending", "Completed")
+        """
+        self.payment_id = payment_id
+        self.reservation_id = reservation_id
+        self.amount = amount
+        self.payment_method = payment_method
+        self.payment_status = payment_status
+
+    # Getter methods
+    def get_payment_id(self):
+        """Return the unique identifier for the payment."""
+        return self.payment_id
+
+    def get_reservation_id(self):
+        """Return the ID of the associated reservation."""
+        return self.reservation_id
+
+    def get_amount(self):
+        """Return the total amount of the payment."""
+        return self.amount
+
+    def get_payment_method(self):
+        """Return the method used for payment."""
+        return self.payment_method
+
+    def get_payment_status(self):
+        """Return the current status of the payment."""
+        return self.payment_status
+
+    # Setter methods
+    def set_payment_id(self, payment_id):
+        """Update the unique identifier for the payment."""
+        self.payment_id = payment_id
+
+    def set_reservation_id(self, reservation_id):
+        """Update the ID of the associated reservation."""
+        self.reservation_id = reservation_id
+
+    def set_amount(self, amount):
+        """Update the total amount of the payment."""
+        self.amount = amount
+
+    def set_payment_method(self, payment_method):
+        """Update the method used for payment."""
+        self.payment_method = payment_method
+
+    def set_payment_status(self, payment_status):
+        """Update the current status of the payment."""
+        self.payment_status = payment_status
+
+    # Payment processing methods
+    def process_payment(self):
+        """
+        Process the payment transaction.
+        This method would interact with a payment gateway or financial system to handle the transaction.
+        """
+        # Implementation would go here
+        pass
+
+    def confirm_payment(self):
+        """
+        Confirm that the payment has been successfully processed.
+        This method would update the payment status and potentially notify relevant parties.
+        """
+        # Implementation would go here
+        pass
+
+    def issue_receipt(self):
+        """
+        Generate and issue a receipt for the payment.
+        This method would create a formal record of the transaction for the customer.
+        """
+        # Implementation would go here
+        pass
+
+
+class Reservation:
+    """
+    Represents a reservation in the hotel management system.
+    Manages booking details including dates, room, and status.
+    """
+
+    def __init__(self, reservation_id, customer_name, check_in_date, check_out_date, room_number, reservation_status):
+        """
+        Initialize a Reservation object with booking details.
+        Constructor takes in the following parameters:
+        - reservation_id: Unique identifier for the reservation
+        - customer_name: Name of the customer making the reservation
+        - check_in_date: Date of check-in
+        - check_out_date: Date of check-out
+        - room_number: Room number being reserved
+        - reservation_status: Current status of the reservation (e.g. "Confirmed", "Pending")
+        """
+        self.reservation_id = reservation_id
+        self.customer_name = customer_name
+        self.check_in_date = check_in_date
+        self.check_out_date = check_out_date
+        self.room_number = room_number
+        self.reservation_status = reservation_status
+
+    # Getter methods
+    def get_reservation_id(self):
+        """Return the unique identifier for the reservation."""
+        return self.reservation_id
+
+    def get_customer_name(self):
+        """Return the name of the customer who made the reservation."""
+        return self.customer_name
+
+    def get_check_in_date(self):
+        """Return the check-in date for the reservation."""
+        return self.check_in_date
+
+    def get_check_out_date(self):
+        """Return the check-out date for the reservation."""
+        return self.check_out_date
+
+    def get_room_number(self):
+        """Return the room number associated with the reservation."""
+        return self.room_number
+
+    def get_reservation_status(self):
+        """Return the current status of the reservation."""
+        return self.reservation_status
+
+    # Setter methods
+    def set_reservation_id(self, reservation_id):
+        """Update the unique identifier for the reservation."""
+        self.reservation_id = reservation_id
+
+    def set_customer_name(self, customer_name):
+        """Update the name of the customer associated with the reservation."""
+        self.customer_name = customer_name
+
+    def set_check_in_date(self, check_in_date):
+        """Update the check-in date for the reservation."""
+        self.check_in_date = check_in_date
+
+    def set_check_out_date(self, check_out_date):
+        """Update the check-out date for the reservation."""
+        self.check_out_date = check_out_date
+
+    def set_room_number(self, room_number):
+        """Update the room number associated with the reservation."""
+        self.room_number = room_number
+
+    def set_reservation_status(self, reservation_status):
+        """Update the current status of the reservation."""
+        self.reservation_status = reservation_status
+
+    # Reservation management methods
+    def view_all_reservations(self):
+        """
+        Display all reservations in the system.
+        This method would typically interact with a database or reservation system.
+        """
+        # Implementation would go here
+        pass
+
+    def modify_reservation(self):
+        """
+        Allow modification of reservation details.
+        This method would update the reservation information in the system.
+        """
+        # Implementation would go here
+        pass
+
+    def cancel_reservation(self):
+        """
+        Cancel an existing reservation.
+        This method would update the reservation status and free up the room.
+        """
+        # Implementation would go here
+        pass
+
+    def make_reservation(self):
+        """
+        Create a new reservation.
+        This method would add a new reservation to the system and associate it with a customer and room.
+        """
+        # Implementation would go here
+        pass
+
+
+class Room:
+    """
+    Represents a room in the hotel management system.
+    Manages room details, availability, and pricing.
+    """
+
+    def __init__(self, room_id, is_available, room_type, price_per_night, number_of_nights):
+        """
+        Initialize a Room object with its details.
+        The Constructor takes in the following parameters:
+        - room_id: Unique identifier for the room
+        - is_available: Boolean indicating if the room is currently available
+        - room_type: Type of the room (e.g. "Enchanted Suite", "Cosmic Cabin", "Mystic Mansion")
+        - price_per_night: Cost of the room per night
+        - number_of_nights: Number of nights the room is booked for
+        """
+        self.room_id = room_id
+        self.is_available = is_available
+        self.room_type = room_type
+        self.price_per_night = price_per_night
+        self.number_of_nights = number_of_nights
+
+    # Getter methods
+    def get_room_id(self):
+        """Return the unique identifier for the room."""
+        return self.room_id
+
+    def get_is_available(self):
+        """Return whether the room is currently available."""
+        return self.is_available
+
+    def get_room_type(self):
+        """Return the type or category of the room."""
+        return self.room_type
+
+    def get_price_per_night(self):
+        """Return the cost of the room per night."""
+        return self.price_per_night
+
+    def get_number_of_nights(self):
+        """Return the number of nights the room is booked for."""
+        return self.number_of_nights
+
+    # Setter methods
+    def set_room_id(self, room_id):
+        """Update the unique identifier for the room."""
+        self.room_id = room_id
+
+    def set_is_available(self, is_available):
+        """Update the availability status of the room."""
+        self.is_available = is_available
+
+    def set_room_type(self, room_type):
+        """Update the type or category of the room."""
+        self.room_type = room_type
+
+    def set_price_per_night(self, price_per_night):
+        """Update the cost of the room per night."""
+        self.price_per_night = price_per_night
+
+    def set_number_of_nights(self, number_of_nights):
+        """Update the number of nights the room is booked for."""
+        self.number_of_nights = number_of_nights
+
+    # Room operation methods
+    def check_availability(self):
+        """
+        Check if the room is available for booking.
+        This method would typically interact with a reservation system to check current status.
+        """
+        # Implementation would go here
+        pass
+
+    def reserve_room(self):
+        """
+        Mark the room as reserved.
+        This method would update the room's availability status in the system.
+        """
+        # Implementation would go here
+        pass
+
+    def calculate_total_price(self):
+        """
+        Calculate the total price for the room stay.
+        This method would multiply the price per night by the number of nights.
+        """
+        # Implementation would go here
+        Pass
+
+
+# Create a Customer instance with a name
+# This represents a guest making a reservation
+guest = Customer(1, "Muhammad", "555-9876", "muhammad@gmail.com")
+
+# Creates a Room instance 
+# This represents the room being reserved
+room = Room(1408, True, "Enchanted Suite", 299.99, 2)
+
+# Creates a Reservation 
+# This links the guest to the room for specific dates
+booking = Reservation(7777, "Muhammad", "2024-12-21", "2024-12-25", 1408, "Confirmed")
+
+# Create a Payment instance with transaction details
+# This represents the payment made for the reservation
+payment = Payment(42424, 7777, 1319.96, "Ethereal Express", "Completed")
+
+# Display Information
+# Print out a summary of the reservation details
+print(f"Customer: {guest.get_name()} ({guest.get_email()})")
+print(f"Room Reserved: Room {room.get_room_id()}, {room.get_room_type()}, ${room.get_price_per_night()} per night")
+print(f"Check-in: {booking.get_check_in_date()} | Check-out: {booking.get_check_out_date()}")
+print(f"Total Payment: ${payment.get_amount()} ({payment.get_payment_method()})")
+
+# scenario two
+guest1 = Customer(2, "Aisha Khan", "555-2345", "aisha.khan@yahoo.com")
+room1 = Room(1205, False, "Cozy Twin Room", 149.99, 2)
+booking1 = Reservation(8888, "Aisha Khan", "2024-11-15", "2024-11-18", 1205, "Confirmed")
+payment1 = Payment(52525, 8888, 449.97, "Unity Bank", "Completed")
+
+# Print out a summary of the reservation details
+print(f"Customer: {guest1.get_name()} ({guest.get_email()})")
+print(f"Room Reserved: Room {room1.get_room_id()}, {room.get_room_type()}, ${room.get_price_per_night()} per night")
+print(f"Check-in: {booking1.get_check_in_date()} | Check-out: {booking.get_check_out_date()}")
+print(f"Total Payment: ${payment1.get_amount()} ({payment.get_payment_method()})")
+
+# scenario three
+guest2 = Customer(3, "Omar Hassan", "555-6789", "omar.hassan@hotmail.com")
+room2 = Room(305, True, "Luxury King Suite", 399.99, 4)
+booking2 = Reservation(9999, "Omar Hassan", "2024-10-05", "2024-10-09", 305, "Confirmed")
+payment2 = Payment(63636, 9999, 1599.96, "GlobalPay", "Completed")
+
+# Print out a summary of the reservation details
+print(f"Customer: {guest2.get_name()} ({guest.get_email()})")
+print(f"Room Reserved: Room {room2.get_room_id()}, {room.get_room_type()}, ${room.get_price_per_night()} per night")
+print(f"Check-in: {booking2.get_check_in_date()} | Check-out: {booking.get_check_out_date()}")
+print(f"Total Payment: ${payment2.get_amount()} ({payment.get_payment_method()})")
+
+# scenario 4
+guest3 = Customer(4, "Fatima Ali", "555-3456", "fatima.ali@gmail.com")
+room3 = Room(210, True, "Executive Queen Suite", 279.99, 3)
+booking3 = Reservation(4444, "Fatima Ali", "2024-09-10", "2024-09-15", 210, "Confirmed")
+payment3 = Payment(74747, 4444, 1399.95, "PayPlus", "Completed")
+
+# Print out a summary of the reservation details
+print(f"Customer: {guest3.get_name()} ({guest.get_email()})")
+print(f"Room Reserved: Room {room3.get_room_id()}, {room.get_room_type()}, ${room.get_price_per_night()} per night")
+print(f"Check-in: {booking3.get_check_in_date()} | Check-out: {booking.get_check_out_date()}")
+print(f"Total Payment: ${payment3.get_amount()} ({payment.get_payment_method()})")
