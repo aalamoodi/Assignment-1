@@ -352,18 +352,18 @@ class Room:
         This method would multiply the price per night by the number of nights.
         """
         # Implementation would go here
-        Pass
+        pass
 
 
 # Create a Customer instance with a name
 # This represents a guest making a reservation
 guest = Customer(1, "Muhammad", "555-9876", "muhammad@gmail.com")
 
-# Creates a Room instance 
+# Creates a Room instance
 # This represents the room being reserved
 room = Room(1408, True, "Enchanted Suite", 299.99, 2)
 
-# Creates a Reservation 
+# Creates a Reservation
 # This links the guest to the room for specific dates
 booking = Reservation(7777, "Muhammad", "2024-12-21", "2024-12-25", 1408, "Confirmed")
 
@@ -379,16 +379,16 @@ print(f"Check-in: {booking.get_check_in_date()} | Check-out: {booking.get_check_
 print(f"Total Payment: ${payment.get_amount()} ({payment.get_payment_method()})")
 
 # scenario two
-guest1 = Customer(2, "Aisha Khan", "555-2345", "aisha.khan@yahoo.com")
+guest1 = Customer(2, "Aisha", "555-2345", "aisha@yahoo.com")
 room1 = Room(1205, False, "Cozy Twin Room", 149.99, 2)
-booking1 = Reservation(8888, "Aisha Khan", "2024-11-15", "2024-11-18", 1205, "Confirmed")
+booking1 = Reservation(8888, "Aisha", "2024-11-15", "2024-11-18", 1205, "Confirmed")
 payment1 = Payment(52525, 8888, 449.97, "Unity Bank", "Completed")
 
 # Print out a summary of the reservation details
-print(f"Customer: {guest1.get_name()} ({guest.get_email()})")
-print(f"Room Reserved: Room {room1.get_room_id()}, {room.get_room_type()}, ${room.get_price_per_night()} per night")
-print(f"Check-in: {booking1.get_check_in_date()} | Check-out: {booking.get_check_out_date()}")
-print(f"Total Payment: ${payment1.get_amount()} ({payment.get_payment_method()})")
+print(f"Customer: {guest1.get_name()} ({guest1.get_email()})")
+print(f"Room Reserved: Room {room1.get_room_id()}, {room1.get_room_type()}, ${room1.get_price_per_night()} per night")
+print(f"Check-in: {booking1.get_check_in_date()} | Check-out: {booking1.get_check_out_date()}")
+print(f"Total Payment: ${payment1.get_amount()} ({payment1.get_payment_method()})")
 
 # scenario three
 guest2 = Customer(3, "Omar Hassan", "555-6789", "omar.hassan@hotmail.com")
@@ -397,10 +397,10 @@ booking2 = Reservation(9999, "Omar Hassan", "2024-10-05", "2024-10-09", 305, "Co
 payment2 = Payment(63636, 9999, 1599.96, "GlobalPay", "Completed")
 
 # Print out a summary of the reservation details
-print(f"Customer: {guest2.get_name()} ({guest.get_email()})")
-print(f"Room Reserved: Room {room2.get_room_id()}, {room.get_room_type()}, ${room.get_price_per_night()} per night")
-print(f"Check-in: {booking2.get_check_in_date()} | Check-out: {booking.get_check_out_date()}")
-print(f"Total Payment: ${payment2.get_amount()} ({payment.get_payment_method()})")
+print(f"Customer: {guest2.get_name()} ({guest2.get_email()})")
+print(f"Room Reserved: Room {room2.get_room_id()}, {room2.get_room_type()}, ${room2.get_price_per_night()} per night")
+print(f"Check-in: {booking2.get_check_in_date()} | Check-out: {booking2.get_check_out_date()}")
+print(f"Total Payment: ${payment2.get_amount()} ({payment2.get_payment_method()})")
 
 # scenario 4
 guest3 = Customer(4, "Fatima Ali", "555-3456", "fatima.ali@gmail.com")
@@ -409,7 +409,7 @@ booking3 = Reservation(4444, "Fatima Ali", "2024-09-10", "2024-09-15", 210, "Con
 payment3 = Payment(74747, 4444, 1399.95, "PayPlus", "Completed")
 
 # Print out a summary of the reservation details
-print(f"Customer: {guest3.get_name()} ({guest.get_email()})")
-print(f"Room Reserved: Room {room3.get_room_id()}, {room.get_room_type()}, ${room.get_price_per_night()} per night")
-print(f"Check-in: {booking3.get_check_in_date()} | Check-out: {booking.get_check_out_date()}")
-print(f"Total Payment: ${payment3.get_amount()} ({payment.get_payment_method()})")
+print(f"Customer: {guest3.get_name()} ({guest3.get_email()})")
+print(f"Room Reserved: Room {room3.get_room_id()}, {room3.get_room_type()}, ${room3.get_price_per_night()} per night")
+print(f"Check-in: {booking3.get_check_in_date()} | Check-out: {booking3.get_check_out_date()}")
+print(f"Total Payment: ${payment3.get_amount()} ({payment3.get_payment_method()})")
